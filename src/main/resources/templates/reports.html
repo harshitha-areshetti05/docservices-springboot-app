@@ -22,7 +22,58 @@
 
 <div class="container mt-4">
     <h1>Reports</h1>
-    <p id="reports-description">This is where reports will be displayed.</p>
+    <p id="reports-description">View and filter reports below.</p>
+
+    <!-- Filter Form -->
+    <form class="row g-3 mb-4">
+      <div class="col-md-4">
+        <label for="fromDate" class="form-label">From Date</label>
+        <input type="date" class="form-control" id="fromDate" name="fromDate">
+      </div>
+      <div class="col-md-4">
+        <label for="toDate" class="form-label">To Date</label>
+        <input type="date" class="form-control" id="toDate" name="toDate">
+      </div>
+      <div class="col-md-4 d-flex align-items-end">
+        <button type="submit" class="btn btn-primary">Filter</button>
+      </div>
+    </form>
+
+    <!-- Reports Table -->
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Report ID</th>
+          <th scope="col">Date</th>
+          <th scope="col">Description</th>
+          <th scope="col">Status</th>
+          <th scope="col">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>2025-06-01</td>
+          <td>Monthly Payment Summary</td>
+          <td><span class="badge bg-success">Completed</span></td>
+          <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+        </tr>
+        <tr>
+          <td>102</td>
+          <td>2025-06-05</td>
+          <td>Quarterly User Activity</td>
+          <td><span class="badge bg-warning text-dark">In Progress</span></td>
+          <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+        </tr>
+        <tr>
+          <td>103</td>
+          <td>2025-06-10</td>
+          <td>Year-End Financials</td>
+          <td><span class="badge bg-danger">Failed</span></td>
+          <td><a href="#" class="btn btn-sm btn-outline-primary">View</a></td>
+        </tr>
+      </tbody>
+    </table>
 </div>
 
 </body>
